@@ -1,0 +1,113 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 2,
+  "final_space": true,
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "text",
+          "template": "⚡️ ",
+          "foreground": "#f1fa8c"
+        },
+        {
+          "type": "path",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "template": " {{ .Path }} ",
+          "properties": {
+            "style": "folder"
+          },
+          "background": "#bd93f9",
+          "foreground": "#ffffff"
+        },
+        {
+          "type": "git",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "template": " ➜ ({{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }}) ",
+          "properties": {
+            "branch_icon": "",
+            "fetch_stash_count": true,
+            "fetch_status": false,
+            "fetch_upstream_icon": true
+          },
+          "background": "#f1fa8c",
+          "foreground": "#000012"
+        },
+        {
+          "type": "time",
+          "style": "diamond",
+          "trailing_diamond": "",
+          "template": " ⌚ {{ .CurrentDate | date .Format }} ",
+          "properties": {
+            "time_format": "15:04"
+          },
+          "background": "#ff79c6",
+          "foreground": "#ffffff"
+        },
+        {
+          "type": "node",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ❯",
+          "background": "#2c2f3d",
+          "foreground": "#abdcb5"
+        },
+        {
+          "type": "npm",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "template": " \ue71e {{ .Full }} ❯",
+          "background": "#2c2f3d",
+          "foreground": "#f5aeaf"
+        },
+        {
+          "type": "docker",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "#9aedfe",
+          "background": "#2c2f3d",
+          "template": " \uf308 {{ .Context }} ❯"
+        },
+        {
+          "type": "text",
+          "template": "\n\n🚀C",
+          "foreground": "#f5b9a8"
+        },
+        {
+          "type": "text",
+          "template": "o",
+          "foreground": "#f6c2a2"
+        },
+        {
+          "type": "text",
+          "template": "m",
+          "foreground": "#e8d69c"
+        },
+        {
+          "type": "text",
+          "template": "ma",
+          "foreground": "#c3daab"
+        },
+        {
+          "type": "text",
+          "template": "n",
+          "foreground": "#a4cfd7"
+        },
+        {
+          "type": "text",
+          "template": "d",
+          "foreground": "#a1c9e8"
+        },
+        {
+          "type": "text",
+          "template": "» ",
+          "foreground": "#c1b9e8"
+        }
+      ]
+    }
+  ]
+}
